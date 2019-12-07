@@ -1,0 +1,23 @@
+{
+  "manifest_version":2,
+  "name": "CoBrowse",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"],
+      "run_at":"document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "browser_action": {
+  },
+  "web_accessible_resources":[
+    "CoBrowse.js"
+  ],
+  "permissions":["identity", "identity.email"]
+}
